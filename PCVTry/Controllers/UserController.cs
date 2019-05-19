@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -45,7 +45,7 @@ namespace PCVTry.Controllers
             {
                 _context.Add(requestinfo);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("UserRequirementsCreate", "User");
+                return RedirectToAction("UserTablesCreate", "User");
             }
             return View(requestinfo);
         }

@@ -12538,11 +12538,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\curti\\spring-2019\\CoreWebApp-newBranch\\PCVTry\\PCVTry.csproj",
+      "projectUniqueName": "C:\\Users\\curti\\Desktop\\Dev\\messageboard\\frontend\\pcvmurcorworkingproject\\PCVTry\\PCVTry.csproj",
       "projectName": "PCVTry",
-      "projectPath": "C:\\Users\\curti\\spring-2019\\CoreWebApp-newBranch\\PCVTry\\PCVTry.csproj",
+      "projectPath": "C:\\Users\\curti\\Desktop\\Dev\\messageboard\\frontend\\pcvmurcorworkingproject\\PCVTry\\PCVTry.csproj",
       "packagesPath": "C:\\Users\\curti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\curti\\spring-2019\\CoreWebApp-newBranch\\PCVTry\\obj\\",
+      "outputPath": "C:\\Users\\curti\\Desktop\\Dev\\messageboard\\frontend\\pcvmurcorworkingproject\\PCVTry\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
