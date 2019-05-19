@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using jsreport.AspNetCore;
-using jsreport.Types;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -50,7 +48,29 @@ namespace PCVTry.Controllers
             return View(requestinfo);
         }
 
-        public IActionResult UserRequirementsCreate()
+    // GET: UserTables/Create
+    public IActionResult UserTablesCreate()
+    {
+      return View();
+    }
+
+    // POST: UserTables/Create
+    // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+    // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> UserTablesCreate([Bind("UserId,LastName,FirstName,Department,Office,ManagerName,IsManager,DateStart,DateEnd")] UserTable userTable)
+    {
+      if (ModelState.IsValid)
+      {
+        _context.Add(userTable);
+        await _context.SaveChangesAsync();
+        return RedirectToAction("UserRequirementsCreate", "User");
+      }
+      return View(userTable);
+    }
+
+    public IActionResult UserRequirementsCreate()
         {
             return View();
         }
@@ -81,7 +101,7 @@ namespace PCVTry.Controllers
             {
                 _context.Add(vmsRolegroup);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("OtsAccessCreate", "User");
+                return RedirectToAction("AddiAccessCreate", "User");
             }
             return View(vmsRolegroup);
         }
@@ -101,7 +121,7 @@ namespace PCVTry.Controllers
             {
                 _context.Add(addiAccess);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("OtsAccessCreate", "User");
             }
             return View(addiAccess);
         }

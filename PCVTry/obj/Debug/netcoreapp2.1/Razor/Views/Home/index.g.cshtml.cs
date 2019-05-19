@@ -66,7 +66,7 @@ using PCVTry.Models;
             WriteLiteral("\r\n\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(57, 914, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4bf8915fa57c4d3088d00341818d6a12", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "404f9769d7ee4a9e93ac2bca8be9a29c", async() => {
                 BeginContext(63, 901, true);
                 WriteLiteral(@"
     <link rel=""stylesheet"" href=""/css/Style.css"">
@@ -93,7 +93,7 @@ using PCVTry.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(973, 1524, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f670661ad04949569a64869f7cf43f03", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e01af7c07c5040f2a96e3370a3223082", async() => {
                 BeginContext(979, 540, true);
                 WriteLiteral(@"
     <div class=""container"">
@@ -110,7 +110,7 @@ using PCVTry.Models;
                         ");
                 EndContext();
                 BeginContext(1519, 869, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "02fda61a116c4e19b3fc7690659ff408", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b285394478dd4af19a6724e335c26fd8", async() => {
                     BeginContext(1545, 836, true);
                     WriteLiteral(@"
                             <div>
