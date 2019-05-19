@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using jsreport.AspNetCore;
+using jsreport.Types;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -25,11 +28,8 @@ namespace PCVTry.Controllers
         }
 
 
-        public IActionResult UserInformation()
-        {
-            return View();
-        }
-     
+
+
 
         // GET: User/Create
         public IActionResult RequestInfoesCreate()
@@ -49,7 +49,7 @@ namespace PCVTry.Controllers
             }
             return View(requestinfo);
         }
-       
+
         public IActionResult UserRequirementsCreate()
         {
             return View();
@@ -85,6 +85,26 @@ namespace PCVTry.Controllers
             }
             return View(vmsRolegroup);
         }
+        public IActionResult AddiAccessCreate()
+        {
+            return View();
+        }
+
+        // POST: AddiAccesses/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddiAccessCreate([Bind("AddiAccessId,Pci,Fdic,Crm,CopyOf")] AddiAccess addiAccess)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(addiAccess);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(addiAccess);
+        }
         public IActionResult OtsAccessCreate()
         {
             return View();
@@ -98,10 +118,52 @@ namespace PCVTry.Controllers
             {
                 _context.Add(otsAccess);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("BpoRoleGroupsCreate", "User");
             }
             return View(otsAccess);
         }
+        public IActionResult BpoRoleGroupsCreate()
+        {
+            return View();
+        }
+
+        // POST: BpoRolegroups/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> BpoRoleGroupsCreate([Bind("Bpoid,Bpoadmin,ContractQc,FdicQc,HoldOrders,MarkOrdersShipped,QcBasic,QcPlus,QcSupervisor,ViewRules")] BpoRolegroup bpoRolegroup)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(bpoRolegroup);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("LrvRoleGroupCreate", "User");
+            }
+            return View(bpoRolegroup);
+        }
+        public IActionResult LrvRoleGroupCreate()
+        {
+            return View();
+        }
+
+        // POST: LrvRolegroups/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> LrvRoleGroupCreate([Bind("LrvId,LrvAdmin,FannieQc,RegularQc,AllQueues")] LrvRolegroup lrvRolegroup)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(lrvRolegroup);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Invoice", "User");
+            }
+            return View(lrvRolegroup);
+        }
+
+   
 
     }
 }
