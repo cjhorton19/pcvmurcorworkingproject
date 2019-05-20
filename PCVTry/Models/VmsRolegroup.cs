@@ -1,15 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PCVTry.Models
 {
     public partial class VmsRolegroup
     {
+       
         public VmsRolegroup()
         {
             Applicationaccess = new HashSet<Applicationaccess>();
-        }
+           
 
+        }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int VmsroleGroupId { get; set; }
         public bool? AccountGroup { get; set; }
         public bool? AdminSupport { get; set; }

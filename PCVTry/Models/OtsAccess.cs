@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PCVTry.Models
 {
@@ -9,7 +11,8 @@ namespace PCVTry.Models
         {
             Applicationaccess = new HashSet<Applicationaccess>();
         }
-
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int OtsAccessId { get; set; }
         public bool? Return { get; set; }
         public bool? MultiAssign { get; set; }

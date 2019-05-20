@@ -53,7 +53,7 @@ namespace PCVTry.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UserId,LastName,FirstName,Department,Office,ManagerName,IsManager,DateStart,DateEnd")] UserTable userTable)
+        public async Task<IActionResult> Create([Bind("UserId,LastName,FirstName,Department,Office,ManagerName,IsManager,JobTitle")] UserTable userTable)
         {
             if (ModelState.IsValid)
             {

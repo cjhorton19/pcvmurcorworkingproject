@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PCVTry.Models
 {
@@ -8,8 +10,11 @@ namespace PCVTry.Models
         public BpoRolegroup()
         {
             Applicationaccess = new HashSet<Applicationaccess>();
+           
+           
         }
-
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Bpoid { get; set; }
         public bool? Bpoadmin { get; set; }
         public bool? ContractQc { get; set; }

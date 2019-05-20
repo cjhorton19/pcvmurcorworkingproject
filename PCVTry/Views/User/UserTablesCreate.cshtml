@@ -54,7 +54,7 @@
                 margin-left: 50px;
             }
 
-        media screen and (max-height: 450px) {
+        @@media screen and (max-height: 450px) {
             .sidenav
 
 
@@ -111,18 +111,81 @@ function openNav() {
     <div class="col-md-4">
         <form asp-action="UserTablesCreate">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+          
             <div class="form-group">
-                <label asp-for="UserId" class="control-label"></label>
-                <input asp-for="UserId" class="form-control" />
-                <span asp-validation-for="UserId" class="text-danger"></span>
+                <label class="control-label">Job Title</label>
+                <select asp-for="JobTitle" id="selJob" placeholder="---Select Job Title---">
+
+                    <option value="Account Manager I">Account Manager I</option>
+                    <option value="Account Manager II">Account Manager II</option>
+                    <option value="Account Payable Clerk">Accounts Payable Clerk</option>
+                    <option value="Accounts Payable Specialist">Accounts Payable Specialist</option>
+                    <option value="Accounts Receivable Specialist">Accounts Receivable Specialist</option>
+                    <option value="Administrative Svs Manager">Administrative Svs Manager</option>
+                    <option value="Assigner I">Assigner I</option>
+                    <option value="Bus Development Account Executive">Bus Development Account Executive</option>
+                    <option value="Chief Executive Officer">Chief Executive Officer</option>
+                    <option value="Chief Information Officer">Chief Information Officer</option>
+                    <option value="Chief Operating Officer">Chief Operating Officer</option>
+                    <option value="Client Manager I">Client Manager I</option>
+                    <option value="Client Manager II">Client Manager II</option>
+                    <option value="Client Manager III">Client Manager III</option>
+                    <option value="Client Services Support">Client Services Support</option>
+                    <option value="Corporate Affairs Counsel">Corporate Affairs Counsel</option>
+                    <option value="DBA/ Reporting Analyst">DBA/ Reporting Analyst</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Director of Legal Compliance/License">Director of Legal Compliance/License</option>
+                    <option value="Director of Operation Compliance">Director of Operation Compliance</option>
+                    <option value="Director of Quality Control Escalations">Director of Quality Control Escalations</option>
+                    <option value="Executive Vice President">Executive Vice President</option>
+                    <option value="Human Resources Generalist">Human Resources Generalist</option>
+                    <option value="Manager of Valuations QC">Manager of Valuations QC</option>
+                    <option value="Marketing Assistant PT">Marketing Assistant PT</option>
+                    <option value="Marketing Manager">Marketing Manager</option>
+                    <option value="Network Engineer">Network Engineer</option>
+                    <option value="Onsite Client Liaison">Onsite Client Liaison</option>
+                    <option value="Operations Manager">Operations Manager</option>
+                    <option value="Production Associate I">Production Associate I</option>
+                    <option value="Production Associate II">Production Associate II</option>
+                    <option value="Project Manager">Project Manager</option>
+                    <option value="QC Analyst III">QC Analyst III</option>
+                    <option value="QC Analyst IV">QC Analyst IV</option>
+                    <option value="QC Escalation Analyst III">QC Escalation Analyst III</option>
+                    <option value="QC Escalation Analyst IV">QC Escalations Analyst IV</option>
+                    <option value="Quality Analyst - Assignment">Quality Analyst - Assignment</option>
+                    <option value="Quality Analyst - Client Services">Quality Analyst - Client Services</option>
+                    <option value="Quality Analyst - Status">Quality Analyst - Status</option>
+                    <option value="Quality Manager">Quality Manager</option>
+                    <option value="Receptionist">Receptionist</option>
+                    <option value="Regulatory Comp Analyst">Regulatory Comp Analyst</option>
+                    <option value="Relationship Manager">Relationship Manager</option>
+                    <option value="Senior Accountant">Senior Accountant</option>
+                    <option value="Senior Developer">Senior Developer</option>
+                    <option value="Senior Manager of Client Relation">Senior Manager of Client Relation</option>
+                    <option value="Senior QC Data Analyst">Senior QC Data Analyst</option>
+                    <option value="SQL DBA">SQL DBA</option>
+                    <option value="Status I">Status I</option>
+                    <option value="Systems Engineer">Systems Engineer</option>
+                    <option value="Systems Engineer Manager">Systems Engineer Manager</option>
+                    <option value="Systems Support Analyst">Systems Support Analyst</option>
+                    <option value="Team Lead - QC">Team Lead - QC</option>
+                    <option value="Team Lead I">Team Lead I</option>
+                    <option value="Team Lead II">Team Lead II</option>
+                    <option value="V.P. of Controller">V.P. of Controller</option>
+                    <option value="V.P. of General Accounting">V.P. of General Accounting</option>
+                    <option value="V.P. of General Counsel">V.P. of General Counsel</option>
+                    <option value="V.P. of Human Resources">V.P. of Human Resources</option>
+                    <option value="Vendor Manager">Vendor Manager</option>
+                    <option value="Vendor Support Assistant">Vendor Support Assistant</option>
+                </select>
             </div>
             <div class="form-group">
-                <label asp-for="LastName" class="control-label"></label>
+                <label class="control-label">Last Name</label>
                 <input asp-for="LastName" class="form-control" />
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FirstName" class="control-label"></label>
+                <label class="control-label">First Name</label>
                 <input asp-for="FirstName" class="form-control" />
                 <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
@@ -137,33 +200,40 @@ function openNav() {
                 <span asp-validation-for="Office" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ManagerName" class="control-label"></label>
-                <input asp-for="ManagerName" class="form-control" />
-                <span asp-validation-for="ManagerName" class="text-danger"></span>
+                <label class="control-label">Manager Name</label>
+                <select asp-for="ManagerName">
+                    <option value="Ayonna Campbell">Ayonna Campbell</option>
+                    <option value="Candy Sirirotpiboon">Candy Sirirotpiboon</option>
+                    <option value="Chris Watson">Chris Watson</option>
+                    <option value="Christie Ramirez">Christie Ramirez</option>
+                    <option value="Cindy Nasser">Cindy Nasser</option>
+                    <option value="Deborah Eppelheimer">Deborah Eppelheimer</option>
+                    <option value="Dora Sandoval">Dora Sandoval</option>
+                    <option value="Felipe Fregoso">Felipe Fregoso</option>
+                    <option value="Gary Marsh">Gary Marsh</option>
+                    <option value="Gloria Clement">Gloria Clement</option>
+                    <option value="Helen Harson">Helen Harson</option>
+                    <option value="Ivette Sanchez">Ivette Sanchez</option>
+                    <option value="Jeff Del Rey">Jeff Del Rey</option>
+                    <option value="Jennifer Marroquin">Jennifer Marroquin</option>
+                    <option value="Joseph Petty">Joseph Petty</option>
+                    <option value="Keith Murray">Keith Murray</option>
+                    <option value="Megan Cote">Megan Cote</option>
+                    <option value="Michael Baz">Michael Baz</option>
+                    <option value="Ron Ihde">Ron Ihde</option>
+                    <option value="Russell Lewis">Russell Lewis</option>
+                </select>
+               
             </div>
             <div class="form-group">
-                <label asp-for="IsManager" class="control-label"></label>
-                <input asp-for="IsManager" class="form-control" />
-                <span asp-validation-for="IsManager" class="text-danger"></span>
+                <label class="control-label">Is the User a Manager? (True or False)</label>
+                @Html.EditorFor(x => x.IsManager)
             </div>
             <div class="form-group">
-                <label asp-for="DateStart" class="control-label"></label>
-                <input asp-for="DateStart" class="form-control" />
-                <span asp-validation-for="DateStart" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DateEnd" class="control-label"></label>
-                <input asp-for="DateEnd" class="form-control" />
-                <span asp-validation-for="DateEnd" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Next" class="btn btn-default" />
             </div>
         </form>
     </div>
-</div>
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

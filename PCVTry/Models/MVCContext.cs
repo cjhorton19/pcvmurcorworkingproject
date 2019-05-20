@@ -30,8 +30,7 @@ namespace PCVTry.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=DESKTOP-JD1AN4I\\SQLSERVER;Database=PCV;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("MVC");
             }
         }
 
@@ -259,13 +258,6 @@ namespace PCVTry.Models
                     .HasColumnName("userID")
                     .ValueGeneratedNever();
 
-                entity.Property(e => e.DateEnd)
-                    .HasColumnName("dateEnd")
-                    .HasColumnType("date");
-
-                entity.Property(e => e.DateStart)
-                    .HasColumnName("dateStart")
-                    .HasColumnType("date");
 
                 entity.Property(e => e.Department)
                     .HasColumnName("department")
@@ -291,6 +283,10 @@ namespace PCVTry.Models
                     .HasColumnName("office")
                     .HasMaxLength(255)
                     .IsUnicode(false);
+                entity.Property(e => e.JobTitle)
+                .HasColumnName("jobTitle")
+                .HasMaxLength(2000)
+                .IsUnicode(false);
             });
 
             modelBuilder.Entity<VmsRolegroup>(entity =>

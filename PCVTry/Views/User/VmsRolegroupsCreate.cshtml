@@ -55,7 +55,7 @@
                 margin-left: 50px;
             }
 
-        media screen and (max-height: 450px) {
+       @@media screen and (max-height: 450px) {
             .sidenav
 
 
@@ -112,96 +112,74 @@ function openNav() {
     <div class="col-md-4">
         <form asp-action="VmsRolegroupsCreate">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
             <div class="form-group">
-                <label asp-for="VmsroleGroupId" class="control-label"></label>
-                <input asp-for="VmsroleGroupId" class="form-control" />
-                <span asp-validation-for="VmsroleGroupId" class="text-danger"></span>
+                <label class="control-label">Accounting Group</label>
+                @Html.EditorFor(x => x.AccountGroup)
             </div>
             <div class="form-group">
-                <label asp-for="AccountGroup" class="control-label"></label>
-                <input asp-for="AccountGroup" class="form-control" />
-                <span asp-validation-for="AccountGroup" class="text-danger"></span>
+                <label  class="control-label">Admin Support</label>
+                @Html.EditorFor(x => x.AdminSupport)
             </div>
             <div class="form-group">
-                <label asp-for="AdminSupport" class="control-label"></label>
-                <input asp-for="AdminSupport" class="form-control" />
-                <span asp-validation-for="AdminSupport" class="text-danger"></span>
+                <label class="control-label">Assignor</label>
+                @Html.EditorFor(x => x.Assignor)
             </div>
             <div class="form-group">
-                <label asp-for="Assignor" class="control-label"></label>
-                <input asp-for="Assignor" class="form-control" />
-                <span asp-validation-for="Assignor" class="text-danger"></span>
+                <label class="control-label">Auditor</label>
+                @Html.EditorFor(x => x.Auditor)
             </div>
             <div class="form-group">
-                <label asp-for="Auditor" class="control-label"></label>
-                <input asp-for="Auditor" class="form-control" />
-                <span asp-validation-for="Auditor" class="text-danger"></span>
+                <label class="control-label">Client Services Department Manager</label>
+                @Html.EditorFor(x => x.CliServiDeptMgr)
             </div>
             <div class="form-group">
-                <label asp-for="CliServiDeptMgr" class="control-label"></label>
-                <input asp-for="CliServiDeptMgr" class="form-control" />
-                <span asp-validation-for="CliServiDeptMgr" class="text-danger"></span>
+                <label class="control-label">Client Servies Group</label>
+                @Html.EditorFor(x => x.CliServiGroup)
             </div>
             <div class="form-group">
-                <label asp-for="CliServiGroup" class="control-label"></label>
-                <input asp-for="CliServiGroup" class="form-control" />
-                <span asp-validation-for="CliServiGroup" class="text-danger"></span>
+                <label class="control-label">Commercial Group</label>
+                @Html.EditorFor(x => x.CommercialGroup)
             </div>
             <div class="form-group">
-                <label asp-for="CommercialGroup" class="control-label"></label>
-                <input asp-for="CommercialGroup" class="form-control" />
-                <span asp-validation-for="CommercialGroup" class="text-danger"></span>
+                <label class="control-label">Contractor QC</label>
+                @Html.EditorFor(x => x.ContractorQc)
             </div>
             <div class="form-group">
-                <label asp-for="ContractorQc" class="control-label"></label>
-                <input asp-for="ContractorQc" class="form-control" />
-                <span asp-validation-for="ContractorQc" class="text-danger"></span>
+                <label class="control-label">IT Group</label>
+                @Html.EditorFor(x => x.Itgroup)
             </div>
             <div class="form-group">
-                <label asp-for="Itgroup" class="control-label"></label>
-                <input asp-for="Itgroup" class="form-control" />
-                <span asp-validation-for="Itgroup" class="text-danger"></span>
+                <label class="control-label">Processing/Shipping Group</label>
+                @Html.EditorFor(x => x.ProcessingShippingGroup)
             </div>
             <div class="form-group">
-                <label asp-for="ProcessingShippingGroup" class="control-label"></label>
-                <input asp-for="ProcessingShippingGroup" class="form-control" />
-                <span asp-validation-for="ProcessingShippingGroup" class="text-danger"></span>
+                <label class="control-label">QC Supervisor Lead</label>
+                @Html.EditorFor(x => x.QcsupervisorLead)
             </div>
             <div class="form-group">
-                <label asp-for="QcsupervisorLead" class="control-label"></label>
-                <input asp-for="QcsupervisorLead" class="form-control" />
-                <span asp-validation-for="QcsupervisorLead" class="text-danger"></span>
+                <label class="control-label">QC</label>
+                @Html.EditorFor(x => x.Qc)
             </div>
             <div class="form-group">
-                <label asp-for="Qc" class="control-label"></label>
-                <input asp-for="Qc" class="form-control" />
-                <span asp-validation-for="Qc" class="text-danger"></span>
+                <label class="control-label">Sales Group</label>
+                @Html.EditorFor(x => x.SalesGroup)
             </div>
             <div class="form-group">
-                <label asp-for="SalesGroup" class="control-label"></label>
-                <input asp-for="SalesGroup" class="form-control" />
-                <span asp-validation-for="SalesGroup" class="text-danger"></span>
+                <label class="control-label">Status Group</label>
+                @Html.EditorFor(x => x.StatusGroup)
             </div>
             <div class="form-group">
-                <label asp-for="StatusGroup" class="control-label"></label>
-                <input asp-for="StatusGroup" class="form-control" />
-                <span asp-validation-for="StatusGroup" class="text-danger"></span>
+                <label class="control-label">Vendor Relations Group</label>
+                @Html.EditorFor(x => x.VendorRelationsGroup)
             </div>
             <div class="form-group">
-                <label asp-for="VendorRelationsGroup" class="control-label"></label>
-                <input asp-for="VendorRelationsGroup" class="form-control" />
-                <span asp-validation-for="VendorRelationsGroup" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Next" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

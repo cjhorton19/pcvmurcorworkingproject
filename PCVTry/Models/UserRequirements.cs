@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PCVTry.Models
 {
     public partial class UserRequirements
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int UserReqId { get; set; }
         public int? FloorNum { get; set; }
         public int? CubeNum { get; set; }
@@ -15,5 +19,6 @@ namespace PCVTry.Models
         public bool? Mobile { get; set; }
         public string UserStatus { get; set; }
         public string UserName { get; set; }
+        
     }
 }

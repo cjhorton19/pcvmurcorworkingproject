@@ -2,12 +2,19 @@
 @{
     ViewData["Title"] = "BpoRolegroupsCreate";
     Layout = "_Layout";
-}  <!DOCTYPE html>
-   
+}
+
+<!DOCTYPE html>
+
+
+
+
 <html>
- 
+
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
           body {
               font-family: "Lato", sans-serif;
@@ -52,8 +59,12 @@
 
             }
 
-           media screen and (max-height: 450px) {
-              .sidenav    
+           @@media screen and (max-height: 450px) {
+              .sidenav
+
+
+
+
 
         {
               padding-top: 10px;
@@ -68,13 +79,37 @@
 
         }
 
-    </style> 
-</head> 
+    </style>
+
+</head>
+
 <body>
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>         <a href="/User/RequestInfoesCreate">Create</a>         <a href="/User/UserTablesCreate">User Information</a>         <a href="/User/UserRequirementsCreate">Requirements</a>         <a href="/User/VmsRolegroupsCreate">Application Access (VMS Role/Group)</a>         <a href="/User/OtsAccessCreate">Application Access (OTS Access)</a>         <a href="/User/BpoRoleGroupsCreate">Application Access (BPO Role/Group)</a>         <a href="/User/LrvRoleGroupCreate">Application Access (LRV Role/Group)</a>     </div>         <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span> 
-        <script>function openNav() {             document.getElementById("mySidenav").style.width = "250px";         }          function closeNav() {             document.getElementById("mySidenav").style.width = "0";         }</script> <br> 
-</body> 
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/User/RequestInfoesCreate">Create</a>
+        <a href="/User/UserTablesCreate">User Information</a>
+        <a href="/User/UserRequirementsCreate">Requirements</a>
+        <a href="/User/VmsRolegroupsCreate">Application Access (VMS Role/Group)</a>
+        <a href="/User/OtsAccessCreate">Application Access (OTS Access)</a>
+        <a href="/User/BpoRoleGroupsCreate">Application Access (BPO Role/Group)</a>
+        <a href="/User/LrvRoleGroupCreate">Application Access (LRV Role/Group)</a>
+    </div>
+
+
+
+
+    <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+        <script>function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }</script> <br>
+
+</body>
+
 </html>
 
 <h2>User Request Form</h2>
@@ -87,39 +122,39 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-group">
-                <label asp-for="Bpoadmin" class="control-label"></label>
+                <label class="control-label">Bpo Admin</label>
                 @Html.EditorFor(x => x.Bpoadmin)
             </div>
             <div class="form-group">
-                <label asp-for="ContractQc" class="control-label"></label>
+                <label class="control-label">Contract QC</label>
                 @Html.EditorFor(x => x.ContractQc)
             </div>
             <div class="form-group">
-                <label asp-for="FdicQc" class="control-label"></label>
+                <label class="control-label">FDIC QC</label>
                 @Html.EditorFor(x => x.FdicQc)
             </div>
             <div class="form-group">
-                <label asp-for="HoldOrders" class="control-label"></label>
+                <label class="control-label">Hold Orders</label>
                 @Html.EditorFor(x => x.HoldOrders)
             </div>
             <div class="form-group">
-                <label asp-for="MarkOrdersShipped" class="control-label"></label>
+                <label class="control-label">Mark Orders Shipped</label>
                 @Html.EditorFor(x => x.MarkOrdersShipped)
             </div>
             <div class="form-group">
-                <label asp-for="QcBasic" class="control-label"></label>
+                <label class="control-label">QC Basic</label>
                 @Html.EditorFor(x => x.QcBasic)
             </div>
             <div class="form-group">
-                <label asp-for="QcPlus" class="control-label"></label>
+                <label class="control-label">QC Plus</label>
                 @Html.EditorFor(x => x.QcPlus)
             </div>
             <div class="form-group">
-                <label asp-for="QcSupervisor" class="control-label"></label>
+                <label class="control-label">QC Supervisor</label>
                 @Html.EditorFor(x => x.QcSupervisor)
             </div>
             <div class="form-group">
-                <label asp-for="ViewRules" class="control-label"></label>
+                <label class="control-label">View Rules</label>
                 @Html.EditorFor(x => x.ViewRules)
             </div>
             <div class="form-group">
@@ -127,9 +162,6 @@
             </div>
         </form>
     </div>
-</div>
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
